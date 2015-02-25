@@ -10,11 +10,12 @@ namespace XamarinWebApi.Entidades
         public string Palestrante { get; set; }
         public string Descricao { get; set; }
 
-        private static List<Palestra> ITEMS = new List<Palestra>();
+        private static List<Palestra> ITEMS;
         public static List<Palestra> Listar()
         {
-            if (ITEMS != null)
+            if (ITEMS == null)
             {
+                ITEMS = new List<Palestra>();
                 Segunda();
                 Terca();
                 Quarta();
