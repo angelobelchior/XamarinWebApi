@@ -13,7 +13,7 @@ namespace XamarinWebApi.Entidades
         private static List<Palestra> ITEMS = new List<Palestra>();
         public static List<Palestra> Listar()
         {
-            if (ITEMS == null)
+            if (ITEMS != null)
             {
                 Segunda();
                 Terca();
